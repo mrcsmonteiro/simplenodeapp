@@ -3,12 +3,12 @@ on:
   push:
     paths:
       - '**.js'
-  jobs:
-    build:
-      name: my job
-      runs-on: ${{ matrix.os }}
+jobs:
+  build:
+    name: my job
+    runs-on: ${{ matrix.os }}
       strategy:
-        matrix:
+      matrix:
           os: [macos-latest, windows-latest, ubuntu-latest]
           node: [10, 12, 14]
           exclude:
